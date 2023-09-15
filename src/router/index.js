@@ -10,6 +10,11 @@ const routes = [
       title: "Newsletter Signup | Ariyibi Baseet",
     },
   },
+  {
+    path: "/confirmation",
+    name: "confirmation",
+    component: () => import("../views/ConfirmationPage.vue"),
+  },
 ];
 
 const router = createRouter({

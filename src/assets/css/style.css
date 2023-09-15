@@ -28,3 +28,24 @@ body {
   list-style-type: none;
   box-sizing: border-box !important;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* General styling for button */
+
+button.btn {
+  background-color: var(--dark-slate-grey);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px;
+}
+
+button.btn:hover {
+  background-color: var(--tomato);
+  color: #fff;
+  box-shadow: 3px 1px 15px var(--grey);
+}

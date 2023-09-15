@@ -1,19 +1,17 @@
 <template>
   <!-- <div class="container"> -->
-  <div class="d-flex align-items-center min-vh-100">
-    <div
-      class="newsletter-wrapper col-12 col-md-8 mx-auto bg-white rounded-5 p-3"
-    >
-      <div class="row flex flex-column-reverse">
-        <div class="col-12 col-md-6 ps-5" style="border: 2px solid black">
+  <div class="wrapper d-flex align-items-center min-vh-100">
+    <div class="newsletter-wrapper mx-auto bg-white rounded-5">
+      <div class="row flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 p-5 content-area">
           <!-- <div class="container"> -->
           <h1 class="mt-5 mb-3">Stay Updated!</h1>
           <p class="mb-3">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
 
-          <ul>
-            <li class="mb-2">
+          <ul class="ps-0 mb-5">
+            <li class="mb-2 ms-0">
               <img src="../../public/img/icon-list.svg" alt="" />
               <span class="ms-3"
                 >Product discovery and building what matters</span
@@ -32,10 +30,14 @@
           </ul>
 
           <div class="mb-3">
-            <label class="mb-2">Email Address</label>
+            <div class="d-flex align-items-center justify-content-between">
+              <label class="mb-2">Email Address</label>
+              <span class="text-danger mb-2 error">Error</span>
+            </div>
+
             <input
               type="email"
-              class="form-control shadow-none"
+              class="form-control shadow-none p-2"
               placeholder="email@company.com"
             />
           </div>
@@ -45,14 +47,10 @@
           </button>
           <!-- </div> -->
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-end p-0">
+        <div class="image-area col-12 col-md-6 d-flex justify-content-end p-0">
+          <NewsletterDesktopImage />
           <img
-            src="../../public/img/illustration-sign-up-desktop.svg"
-            alt=""
-            class="image object-fit-cover d-none d-md-block"
-          />
-          <img
-            src="../../public/img/illustration-sign-up-mobile.svg"
+            src="../../public/img/illustration-sign-up-mobile.png"
             alt=""
             class="d-block d-md-none w-100"
           />
@@ -64,13 +62,24 @@
 </template>
 
 <script>
+import NewsletterDesktopImage from "@/components/NewsletterDesktopImage.vue";
 export default {
   name: "HomeView",
+  components: { NewsletterDesktopImage },
   setup() {},
 };
 </script>
 
-<style>
+<style scoped>
+.newsletter-wrapper {
+  padding: 28px 30px;
+  box-sizing: border-box;
+  max-width: 900px;
+}
+.image {
+  width: 400px;
+  height: 593px;
+}
 h1 {
   font-weight: 700;
 }
@@ -80,13 +89,15 @@ li {
   font-size: 14px;
 }
 
-label {
+label,
+.error {
   font-size: 12px;
   font-weight: 700;
 }
 input.form-control,
 input.form-control:focus {
   border: 1px solid var(--grey);
+  font-size: 16px;
 }
 input.form-control:hover {
   cursor: pointer;
@@ -95,30 +106,27 @@ input.form-control:hover {
   color: var(--grey);
 }
 
-button.btn {
-  background-color: var(--dark-slate-grey);
-  color: #fff;
-  font-weight: 700;
-  padding: 14px;
-}
-
-button.btn:hover {
-  background-color: var(--tomato);
-  color: #fff;
-  box-shadow: 3px 1px 15px var(--grey);
-}
-
 img.image {
   height: 500px;
 }
 
 /* Responsiveness */
-@media screen and (max-width: 576px) {
-  .newsletter-wrapper {
-    border-radius: 0 !important;
-  }
-}
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    align-items: flex-start !important;
+    height: auto !important;
+  }
+  .newsletter-wrapper {
+    padding: 0;
+    width: 100%;
+    border-radius: 0 !important;
+  }
+  .content-area {
+    padding: 2.5rem !important;
+  }
+  .image-area {
+    padding: 0 !important;
+  }
 }
 </style>

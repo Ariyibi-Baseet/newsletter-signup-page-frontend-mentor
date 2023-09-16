@@ -16,8 +16,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -34,56 +32,57 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop view](./public/screenshot/desktop_view.png)
+![Mobile view](./public/screenshot/desktop_view.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Ariyibi-Baseet/newsletter-signup-page-frontend-mentor)
+- Live Site URL: [Add live site URL here](https://newsletter-signup-page-frontend-mentor.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- HTML5
+- CSS3
+- Bootstrap5
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vue Js](https://reactjs.org/) - Fast-rising Javascript framework
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+What stood out for me in this particular project is how to use REGEX, how to implement watchers and use computed properties to carry out amazing tasks.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Some code snippet here:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+// For Email validation
+const isEmail = computed(() => {
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+  return emailRegex.test(formData.value.email);
+
+  // To disable button by default
+  const isBtnDissabled = computed(() => {
+    return formData.value.email == "";
+  });
+
+  // conditions for validation and watchers
+  const validateEmail = () => {
+    if (formData.value.email) {
+      router.push({
+        name: "confirmation",
+        params: { email: formData.value.email },
+      });
+      if (isEmail.value) {
+        return isEmail;
+      }
+    }
+  };
+
+  watch(formData, validateEmail);
+});
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -92,16 +91,12 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Looking forwars to implement custom vue loader. And that will be implemented soon. So watch out for it
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Vue Watchers](https://vuejs.org/guide/essentials/watchers.html) - This helped in handling my computed properties well.
+- [Vue Computed Properties](https://www.example.com) - This give me good insight on how to use computed properties very well
 
 ## Author
 
@@ -109,10 +104,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@Ariyibi-Baseet](https://www.frontendmentor.io/profile/Ariyibi-Baseet)
 - Twitter - [@ariyibibaseet\_](https://www.twitter.com/ariyibibaseet_)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I acknowledged myslef for putting in more effort so as to accomplish this task. See you in the next task

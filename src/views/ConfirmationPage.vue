@@ -7,21 +7,34 @@
       <h1 class="mt-3">Thanks for subscribing!</h1>
       <p class="mt-2 mb-5">
         A confirmation email has been sent to
-        <span class="fw-bold">ash@loremcompany.com</span>. Please open it and
-        click the button inside to confirm your subscription.
+        <span class="fw-bold">{{ userEmail }}</span
+        >. Please open it and click the button inside to confirm your
+        subscription.
       </p>
 
-      <button class="btn w-100">Dismiss message</button>
+      <button class="btn w-100" @click="backToHome">Dismiss message</button>
     </div>
   </div>
 </template>
 
 <script>
+import { useRoute, useRouter } from "vue-router";
 import SuccessImage from "@/components/SuccessImage.vue";
 
 export default {
   name: "ConfirmationPage",
   components: { SuccessImage },
+  setup() {
+    const route = useRoute();
+    const router = useRouter();
+    const userEmail = route.params.email;
+
+    const backToHome = () => {
+      router.push({ name: "home" });
+    };
+
+    return { userEmail, backToHome };
+  },
 };
 </script>
 

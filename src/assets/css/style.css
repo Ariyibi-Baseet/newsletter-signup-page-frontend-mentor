@@ -1,6 +1,7 @@
 :root {
   /* Primary color */
   --tomato: hsl(4, 100%, 67%);
+  --light-tomato: hsl(2, 52%, 91%);
 
   /* Neutral color */
   --dark-slate-grey: hsl(234, 29%, 20%);

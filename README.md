@@ -86,7 +86,7 @@ Looking forwars to implement custom vue loader. And that will be implemented soo
 ### Useful resources
 
 - [Vue Watchers](https://vuejs.org/guide/essentials/watchers.html) - This helped in handling my computed properties well.
-- [Vue Computed Properties](https://www.example.com) - This give me good insight on how to use computed properties very well
+- [Vue Computed Properties](https://www.example.com) - This give me good insight on how to use computed properties very well -[AbstractApi](https://www.abstractapi.com/tools/email-regex-guide) - More Examples on how to use regex
 
 ## Author
 

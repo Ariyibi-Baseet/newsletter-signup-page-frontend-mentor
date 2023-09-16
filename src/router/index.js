@@ -11,7 +11,7 @@ const routes = [
     },
   },
   {
-    path: "/confirmation",
+    path: "/confirmation/:email",
     name: "confirmation",
     component: () => import("../views/ConfirmationPage.vue"),
   },

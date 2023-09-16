@@ -33,7 +33,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop view](./public/screenshot/desktop_view.png)
-![Mobile view](./public/screenshot/desktop_view.png)
+![Mobile view](./public/screenshot/mobile_view.png)
 
 ### Links
 

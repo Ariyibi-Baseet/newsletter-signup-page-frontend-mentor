@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Ariyibi-Baseet/newsletter-signup-page-frontend-mentor)
-- Live Site URL: [Add live site URL here](https://newsletter-signup-page-frontend-mentor.vercel.app/)
+- Solution URL: [Newsletter Signup Page - Github](https://github.com/Ariyibi-Baseet/newsletter-signup-page-frontend-mentor)
+- Live Site URL: [Newsletter Signup Page - Vercel](https://newsletter-signup-page-frontend-mentor.vercel.app/)
 
 ## My process
 
@@ -48,7 +48,7 @@ Users should be able to:
 - CSS3
 - Bootstrap5
 - Mobile-first workflow
-- [Vue Js](https://reactjs.org/) - Fast-rising Javascript framework
+- [Vue Js](https://vuejs.org/) - Fast-rising Javascript framework
 
 ### What I learned
 
@@ -84,10 +84,6 @@ const isEmail = computed(() => {
   watch(formData, validateEmail);
 });
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 

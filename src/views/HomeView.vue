@@ -3,12 +3,12 @@
     <div class="newsletter-wrapper mx-auto bg-white rounded-5">
       <div class="row flex-column-reverse flex-md-row">
         <div class="col-12 col-md-6 p-5 content-area">
-          <h1 class="mt-5 mb-3">Stay Updated!</h1>
-          <p class="mb-3">
+          <h1 class="mt-5 mb-3" role="heading">Stay Updated!</h1>
+          <p class="mb-3" role="paragraph">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
 
-          <ul class="ps-0 mb-5">
+          <ul class="ps-0 mb-5" role="list">
             <li class="mb-2 ms-0">
               <img src="../../public/img/icon-list.svg" alt="" />
               <span class="ms-3"

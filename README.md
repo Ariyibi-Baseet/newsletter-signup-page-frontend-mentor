@@ -6,7 +6,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -29,11 +28,6 @@ Users should be able to:
   - The email address is not formatted correctly
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-
-### Screenshot
-
-![Desktop view](./public/screenshot/desktop_view.png)
-![Mobile view](./public/screenshot/mobile_view.png)
 
 ### Links
 
@@ -92,7 +86,7 @@ Looking forwars to implement custom vue loader. And that will be implemented soo
 ### Useful resources
 
 - [Vue Watchers](https://vuejs.org/guide/essentials/watchers.html) - This helped in handling my computed properties well.
-- [Vue Computed Properties](https://www.example.com) - This give me good insight on how to use computed properties very well
+- [Vue Computed Properties](https://www.example.com) - This give me good insight on how to use computed properties very well -[AbstractApi](https://www.abstractapi.com/tools/email-regex-guide) - More Examples on how to use regex
 
 ## Author
 

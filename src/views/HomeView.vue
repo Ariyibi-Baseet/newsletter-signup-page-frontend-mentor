@@ -46,16 +46,9 @@
             />
           </div>
 
-          <button
-            class="btn w-100 mt-3"
-            @click="validateEmail"
-            :disabled="isBtnDissabled"
-          >
+          <button class="btn w-100 mt-3" @click="validateEmail">
             Subscribe to monthly newsletter
           </button>
-          <small class="d-block mt-2 text-danger"
-            >Button is disabled when email field is empty</small
-          >
         </div>
         <div class="image-area col-12 col-md-6 d-flex justify-content-end p-0">
           <NewsletterDesktopImage />
@@ -80,7 +73,7 @@ export default {
   components: { NewsletterDesktopImage },
   setup() {
     const router = useRouter();
-    const { isEmail, formData, isBtnDissabled } = formValidation();
+    const { isEmail, formData } = formValidation();
 
     const validateEmail = () => {
       if (formData.value.email) {
@@ -96,7 +89,7 @@ export default {
 
     watch(formData, validateEmail);
 
-    return { formData, isEmail, validateEmail, isBtnDissabled };
+    return { formData, isEmail, validateEmail };
   },
 };
 </script>

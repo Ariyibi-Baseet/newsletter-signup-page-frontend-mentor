@@ -13,12 +13,7 @@ const formValidation = () => {
     return emailRegex.test(formData.value.email);
   });
 
-  // Disable button when nothing email field is empty
-  const isBtnDissabled = computed(() => {
-    return formData.value.email == "";
-  });
-
-  return { formData, isEmail, isBtnDissabled };
+  return { formData, isEmail };
 };
 
 export default formValidation;
